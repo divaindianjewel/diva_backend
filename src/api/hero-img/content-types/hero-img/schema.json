@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hero_imgs",
+  "info": {
+    "singularName": "hero-img",
+    "pluralName": "hero-imgs",
+    "displayName": "hero_img",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
