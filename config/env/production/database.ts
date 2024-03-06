@@ -1,17 +1,20 @@
 module.exports = ({ env }) => ({
-  connection: {
-    client: 'postgres',
-    connection: {
-      host: env('DATABASE_HOST', '127.0.0.1'),
-      port: env.int('DATABASE_PORT', 5432),
-      database: env('DATABASE_NAME', 'strapi'),
-      user: env('DATABASE_USERNAME', 'strapi'),
-      password: env('DATABASE_PASSWORD', 'strapi'),
-      schema: env('DATABASE_SCHEMA', 'public'), // Not required
-      ssl: {
-        ca : env('DATABASE_CA')
-      },
-    },
-    debug: false,
+  defaultConnection: 'default',
+  connections: {
+     default: {
+       connector: 'mongoose',
+       settings: {
+         host: env('DATABASE_HOST', 'db-postgresql-nyc3-57037-do-user-15972844-0.c.db.ondigitalocean.com'),
+         port: env.int('DATABASE_PORT', 25060),
+         database: env('DATABASE_NAME', 'defaultdb'),
+         username: env('DATABASE_USERNAME', 'doadmin'),
+         password: env('DATABASE_PASSWORD', 'AVNS_JXmo4yxFdkYcfq9SUgT'),
+       },
+       options: {
+         authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
+         ssl: env.bool('DATABASE_SSL', true),
+       },
+     },
   },
-});
+ });
+ 
