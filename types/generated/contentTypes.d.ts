@@ -881,6 +881,11 @@ export interface ApiHeroImgHeroImg extends Schema.CollectionType {
   };
   attributes: {
     hero_img: Attribute.Media;
+    category: Attribute.Relation<
+      'api::hero-img.hero-img',
+      'oneToOne',
+      'api::category.category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
