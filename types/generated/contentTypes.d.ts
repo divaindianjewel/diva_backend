@@ -868,13 +868,12 @@ export interface ApiColorColor extends Schema.CollectionType {
   };
 }
 
-export interface ApiHeroImgHeroImg extends Schema.CollectionType {
-  collectionName: 'hero_imgs';
+export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
+  collectionName: 'home_banners';
   info: {
-    singularName: 'hero-img';
-    pluralName: 'hero-imgs';
-    displayName: 'hero_img';
-    description: '';
+    singularName: 'home-banner';
+    pluralName: 'home-banners';
+    displayName: 'home_banner';
   };
   options: {
     draftAndPublish: false;
@@ -882,20 +881,20 @@ export interface ApiHeroImgHeroImg extends Schema.CollectionType {
   attributes: {
     banner: Attribute.Media;
     category: Attribute.Relation<
-      'api::hero-img.hero-img',
+      'api::home-banner.home-banner',
       'oneToOne',
       'api::category.category'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::hero-img.hero-img',
+      'api::home-banner.home-banner',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::hero-img.hero-img',
+      'api::home-banner.home-banner',
       'oneToOne',
       'admin::user'
     > &
@@ -1006,7 +1005,7 @@ declare module '@strapi/types' {
       'api::cart.cart': ApiCartCart;
       'api::category.category': ApiCategoryCategory;
       'api::color.color': ApiColorColor;
-      'api::hero-img.hero-img': ApiHeroImgHeroImg;
+      'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
       'api::product.product': ApiProductProduct;
       'api::review.review': ApiReviewReview;
     }

@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "hero_imgs",
+  "collectionName": "home_banners",
   "info": {
-    "singularName": "hero-img",
-    "pluralName": "hero-imgs",
-    "displayName": "hero_img",
-    "description": ""
+    "singularName": "home-banner",
+    "pluralName": "home-banners",
+    "displayName": "home_banner"
   },
   "options": {
     "draftAndPublish": false
@@ -13,15 +12,14 @@
   "pluginOptions": {},
   "attributes": {
     "banner": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "category": {
       "type": "relation",
