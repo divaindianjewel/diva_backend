@@ -880,7 +880,7 @@ export interface ApiHeroImgHeroImg extends Schema.CollectionType {
     draftAndPublish: false;
   };
   attributes: {
-    hero_img: Attribute.Media;
+    banner: Attribute.Media;
     category: Attribute.Relation<
       'api::hero-img.hero-img',
       'oneToOne',
