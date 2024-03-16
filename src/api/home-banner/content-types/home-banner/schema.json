@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home-banner",
     "pluralName": "home-banners",
-    "displayName": "home_banner"
+    "displayName": "home_banner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -12,14 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "category": {
       "type": "relation",

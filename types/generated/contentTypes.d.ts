@@ -820,8 +820,8 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
-    home_pic: Attribute.Media;
-    bannner: Attribute.Media;
+    home_pic: Attribute.Media & Attribute.Required;
+    bannner: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -874,12 +874,13 @@ export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
     singularName: 'home-banner';
     pluralName: 'home-banners';
     displayName: 'home_banner';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    banner: Attribute.Media;
+    banner: Attribute.Media & Attribute.Required;
     category: Attribute.Relation<
       'api::home-banner.home-banner',
       'oneToOne',
@@ -918,7 +919,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     price: Attribute.Decimal;
     compare_price: Attribute.Decimal;
     stock: Attribute.Decimal;
-    images: Attribute.Media;
+    images: Attribute.Media & Attribute.Required;
     feature: Attribute.Boolean;
     gender: Attribute.Enumeration<['both', 'male', 'female']>;
     color: Attribute.Relation<
