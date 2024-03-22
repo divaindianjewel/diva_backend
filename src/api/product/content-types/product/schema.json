@@ -63,6 +63,9 @@
     },
     "youtube_link": {
       "type": "string"
+    },
+    "size": {
+      "type": "string"
     }
   }
 }

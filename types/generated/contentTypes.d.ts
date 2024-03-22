@@ -934,6 +934,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::category.category'
     >;
     youtube_link: Attribute.String;
+    size: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
