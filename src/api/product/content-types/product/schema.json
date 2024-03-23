@@ -66,6 +66,9 @@
     },
     "size": {
       "type": "string"
+    },
+    "description_2": {
+      "type": "blocks"
     }
   }
 }

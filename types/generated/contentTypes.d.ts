@@ -935,6 +935,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     >;
     youtube_link: Attribute.String;
     size: Attribute.String;
+    description_2: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
