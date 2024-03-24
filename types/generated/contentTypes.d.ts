@@ -927,7 +927,6 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'oneToOne',
       'api::color.color'
     >;
-    desctiption: Attribute.RichText & Attribute.Required;
     category: Attribute.Relation<
       'api::product.product',
       'oneToOne',
@@ -935,7 +934,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     >;
     youtube_link: Attribute.String;
     size: Attribute.String;
-    description_2: Attribute.Blocks;
+    description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

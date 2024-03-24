@@ -52,10 +52,6 @@
       "relation": "oneToOne",
       "target": "api::color.color"
     },
-    "desctiption": {
-      "type": "richtext",
-      "required": true
-    },
     "category": {
       "type": "relation",
       "relation": "oneToOne",
@@ -67,7 +63,7 @@
     "size": {
       "type": "string"
     },
-    "description_2": {
+    "description": {
       "type": "blocks"
     }
   }
