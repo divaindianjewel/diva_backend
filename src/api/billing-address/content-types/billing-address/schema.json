@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "billing_addresses",
+  "info": {
+    "singularName": "billing-address",
+    "pluralName": "billing-addresses",
+    "displayName": "billing_address"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "pincode": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "decimal"
+    }
+  }
+}
