@@ -26,6 +26,9 @@
     },
     "qnt": {
       "type": "decimal"
+    },
+    "img": {
+      "type": "string"
     }
   }
 }

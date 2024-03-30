@@ -837,6 +837,7 @@ export interface ApiCartCart extends Schema.CollectionType {
     product_price: Attribute.Decimal;
     user_id: Attribute.String;
     qnt: Attribute.Decimal;
+    img: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::cart.cart', 'oneToOne', 'admin::user'> &
