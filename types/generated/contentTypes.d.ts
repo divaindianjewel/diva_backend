@@ -786,13 +786,14 @@ export interface ApiBillingAddressBillingAddress extends Schema.CollectionType {
   info: {
     singularName: 'billing-address';
     pluralName: 'billing-addresses';
-    displayName: 'billing_address';
+    displayName: 'billingAddress';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    first_name: Attribute.String;
+    first_name: Attribute.String & Attribute.Required;
     last_name: Attribute.String;
     address: Attribute.String;
     city: Attribute.String;
@@ -800,7 +801,8 @@ export interface ApiBillingAddressBillingAddress extends Schema.CollectionType {
     state: Attribute.String;
     country: Attribute.String;
     email: Attribute.String;
-    phone_number: Attribute.Decimal;
+    user_id: Attribute.String;
+    phone_number: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
