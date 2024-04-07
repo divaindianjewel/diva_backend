@@ -908,6 +908,37 @@ export interface ApiColorColor extends Schema.CollectionType {
   };
 }
 
+export interface ApiCouponCoupon extends Schema.CollectionType {
+  collectionName: 'coupons';
+  info: {
+    singularName: 'coupon';
+    pluralName: 'coupons';
+    displayName: 'coupon';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Type: Attribute.Enumeration<['amount', 'percentage']>;
+    Coupon_code: Attribute.String;
+    Number: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::coupon.coupon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::coupon.coupon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
   collectionName: 'home_banners';
   info: {
@@ -936,6 +967,71 @@ export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-banner.home-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOrderOrder extends Schema.CollectionType {
+  collectionName: 'orders';
+  info: {
+    singularName: 'order';
+    pluralName: 'orders';
+    displayName: 'order';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    user_id: Attribute.String;
+    order_date: Attribute.String;
+    total_price: Attribute.BigInteger;
+    order_id: Attribute.String;
+    discount: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::order.order',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOrderedProductOrderedProduct extends Schema.CollectionType {
+  collectionName: 'ordered_products';
+  info: {
+    singularName: 'ordered-product';
+    pluralName: 'ordered-products';
+    displayName: 'ordered_product';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    order_id: Attribute.BigInteger;
+    product_id: Attribute.BigInteger;
+    qnt: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ordered-product.ordered-product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ordered-product.ordered-product',
       'oneToOne',
       'admin::user'
     > &
@@ -1048,7 +1144,10 @@ declare module '@strapi/types' {
       'api::cart.cart': ApiCartCart;
       'api::category.category': ApiCategoryCategory;
       'api::color.color': ApiColorColor;
+      'api::coupon.coupon': ApiCouponCoupon;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
+      'api::order.order': ApiOrderOrder;
+      'api::ordered-product.ordered-product': ApiOrderedProductOrderedProduct;
       'api::product.product': ApiProductProduct;
       'api::review.review': ApiReviewReview;
     }

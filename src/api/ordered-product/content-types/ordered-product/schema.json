@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordered_products",
+  "info": {
+    "singularName": "ordered-product",
+    "pluralName": "ordered-products",
+    "displayName": "ordered_product"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_id": {
+      "type": "biginteger"
+    },
+    "product_id": {
+      "type": "biginteger"
+    },
+    "qnt": {
+      "type": "biginteger"
+    }
+  }
+}
