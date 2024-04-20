@@ -26,6 +26,9 @@
     },
     "discount": {
       "type": "string"
+    },
+    "user_name": {
+      "type": "string"
     }
   }
 }
