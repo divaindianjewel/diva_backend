@@ -21,9 +21,6 @@
     "total_price": {
       "type": "biginteger"
     },
-    "order_id": {
-      "type": "string"
-    },
     "discount": {
       "type": "string"
     },
