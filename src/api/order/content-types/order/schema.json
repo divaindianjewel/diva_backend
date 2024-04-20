@@ -21,11 +21,11 @@
     "total_price": {
       "type": "biginteger"
     },
-    "discount": {
-      "type": "string"
-    },
     "user_name": {
       "type": "string"
+    },
+    "discount": {
+      "type": "biginteger"
     }
   }
 }
