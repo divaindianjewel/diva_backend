@@ -26,6 +26,10 @@
     },
     "discount": {
       "type": "biginteger"
+    },
+    "ordered": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
