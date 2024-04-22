@@ -20,6 +20,18 @@
     },
     "qnt": {
       "type": "biginteger"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "image": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

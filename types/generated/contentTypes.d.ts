@@ -1024,6 +1024,10 @@ export interface ApiOrderedProductOrderedProduct extends Schema.CollectionType {
     orderId: Attribute.BigInteger;
     productId: Attribute.BigInteger;
     qnt: Attribute.BigInteger;
+    price: Attribute.BigInteger;
+    image: Attribute.String;
+    date: Attribute.String;
+    name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
