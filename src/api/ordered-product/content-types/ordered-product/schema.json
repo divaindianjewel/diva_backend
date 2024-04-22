@@ -4,17 +4,18 @@
   "info": {
     "singularName": "ordered-product",
     "pluralName": "ordered-products",
-    "displayName": "ordered_product"
+    "displayName": "ordered_product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "order_id": {
+    "orderId": {
       "type": "biginteger"
     },
-    "product_id": {
+    "productId": {
       "type": "biginteger"
     },
     "qnt": {

@@ -1015,13 +1015,14 @@ export interface ApiOrderedProductOrderedProduct extends Schema.CollectionType {
     singularName: 'ordered-product';
     pluralName: 'ordered-products';
     displayName: 'ordered_product';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    order_id: Attribute.BigInteger;
-    product_id: Attribute.BigInteger;
+    orderId: Attribute.BigInteger;
+    productId: Attribute.BigInteger;
     qnt: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
