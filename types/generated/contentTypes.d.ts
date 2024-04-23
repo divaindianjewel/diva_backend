@@ -1028,6 +1028,7 @@ export interface ApiOrderedProductOrderedProduct extends Schema.CollectionType {
     image: Attribute.String;
     date: Attribute.String;
     name: Attribute.String;
+    userId: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
