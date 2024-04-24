@@ -939,6 +939,37 @@ export interface ApiCouponCoupon extends Schema.CollectionType {
   };
 }
 
+export interface ApiDiscountDiscount extends Schema.CollectionType {
+  collectionName: 'discounts';
+  info: {
+    singularName: 'discount';
+    pluralName: 'discounts';
+    displayName: 'discount';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    code: Attribute.String;
+    amount: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::discount.discount',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::discount.discount',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
   collectionName: 'home_banners';
   info: {
@@ -1151,6 +1182,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::color.color': ApiColorColor;
       'api::coupon.coupon': ApiCouponCoupon;
+      'api::discount.discount': ApiDiscountDiscount;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
       'api::order.order': ApiOrderOrder;
       'api::ordered-product.ordered-product': ApiOrderedProductOrderedProduct;
