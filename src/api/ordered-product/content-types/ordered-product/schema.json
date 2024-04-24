@@ -32,9 +32,6 @@
     },
     "name": {
       "type": "string"
-    },
-    "userid": {
-      "type": "string"
     }
   }
 }
