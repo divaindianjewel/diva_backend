@@ -908,43 +908,13 @@ export interface ApiColorColor extends Schema.CollectionType {
   };
 }
 
-export interface ApiCouponCoupon extends Schema.CollectionType {
-  collectionName: 'coupons';
-  info: {
-    singularName: 'coupon';
-    pluralName: 'coupons';
-    displayName: 'coupon';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    Type: Attribute.Enumeration<['amount', 'percentage']>;
-    Coupon_code: Attribute.String;
-    Number: Attribute.BigInteger;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::coupon.coupon',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::coupon.coupon',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiDiscountDiscount extends Schema.CollectionType {
   collectionName: 'discounts';
   info: {
     singularName: 'discount';
     pluralName: 'discounts';
-    displayName: 'discount';
+    displayName: 'discount-code';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1181,7 +1151,6 @@ declare module '@strapi/types' {
       'api::cart.cart': ApiCartCart;
       'api::category.category': ApiCategoryCategory;
       'api::color.color': ApiColorColor;
-      'api::coupon.coupon': ApiCouponCoupon;
       'api::discount.discount': ApiDiscountDiscount;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
       'api::order.order': ApiOrderOrder;

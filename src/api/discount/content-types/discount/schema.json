@@ -4,7 +4,8 @@
   "info": {
     "singularName": "discount",
     "pluralName": "discounts",
-    "displayName": "discount"
+    "displayName": "discount-code",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
