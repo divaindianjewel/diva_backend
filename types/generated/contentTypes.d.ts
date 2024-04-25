@@ -989,7 +989,7 @@ export interface ApiOrderOrder extends Schema.CollectionType {
   attributes: {
     user_id: Attribute.String;
     order_date: Attribute.String;
-    total_price: Attribute.BigInteger;
+    total_price: Attribute.Float;
     user_name: Attribute.String;
     discount: Attribute.BigInteger;
     ordered: Attribute.Boolean & Attribute.DefaultTo<false>;

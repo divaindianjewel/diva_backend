@@ -19,7 +19,7 @@
       "type": "string"
     },
     "total_price": {
-      "type": "biginteger"
+      "type": "float"
     },
     "user_name": {
       "type": "string"
