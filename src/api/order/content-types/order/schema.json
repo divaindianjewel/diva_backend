@@ -30,6 +30,9 @@
     "ordered": {
       "type": "boolean",
       "default": false
+    },
+    "total_product": {
+      "type": "biginteger"
     }
   }
 }

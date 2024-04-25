@@ -993,6 +993,7 @@ export interface ApiOrderOrder extends Schema.CollectionType {
     user_name: Attribute.String;
     discount: Attribute.BigInteger;
     ordered: Attribute.Boolean & Attribute.DefaultTo<false>;
+    total_product: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
