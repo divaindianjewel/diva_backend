@@ -975,6 +975,36 @@ export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
   };
 }
 
+export interface ApiMainCategoryMainCategory extends Schema.CollectionType {
+  collectionName: 'main_categories';
+  info: {
+    singularName: 'main-category';
+    pluralName: 'main-categories';
+    displayName: 'main_category';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::main-category.main-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::main-category.main-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOrderOrder extends Schema.CollectionType {
   collectionName: 'orders';
   info: {
@@ -1155,6 +1185,7 @@ declare module '@strapi/types' {
       'api::color.color': ApiColorColor;
       'api::discount.discount': ApiDiscountDiscount;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
+      'api::main-category.main-category': ApiMainCategoryMainCategory;
       'api::order.order': ApiOrderOrder;
       'api::ordered-product.ordered-product': ApiOrderedProductOrderedProduct;
       'api::product.product': ApiProductProduct;
