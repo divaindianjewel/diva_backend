@@ -862,6 +862,11 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     name: Attribute.String & Attribute.Required;
     home_pic: Attribute.Media & Attribute.Required;
     bannner: Attribute.Media & Attribute.Required;
+    main_category: Attribute.Relation<
+      'api::category.category',
+      'oneToOne',
+      'api::main-category.main-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

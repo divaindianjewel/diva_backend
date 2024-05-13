@@ -37,6 +37,11 @@
         "videos",
         "audios"
       ]
+    },
+    "main_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::main-category.main-category"
     }
   }
 }
