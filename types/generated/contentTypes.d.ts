@@ -1119,6 +1119,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
     youtube_link: Attribute.String;
     size: Attribute.String;
     description: Attribute.Blocks;
+    Return_7_day: Attribute.Enumeration<['Yes', 'No']>;
+    Cash_On_Deliver: Attribute.Enumeration<['Yes', 'No']>;
+    Warranty_6_month: Attribute.Enumeration<['Yes', 'No']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

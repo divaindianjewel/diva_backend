@@ -65,6 +65,27 @@
     },
     "description": {
       "type": "blocks"
+    },
+    "Return_7_day": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Cash_On_Deliver": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "Warranty_6_month": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ]
     }
   }
 }
