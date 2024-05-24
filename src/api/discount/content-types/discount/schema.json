@@ -17,6 +17,20 @@
     },
     "amount": {
       "type": "biginteger"
+    },
+    "discount_type": {
+      "type": "enumeration",
+      "enum": [
+        "Amount (₹)",
+        "Percentage ( % )"
+      ]
+    },
+    "Condition": {
+      "type": "enumeration",
+      "enum": [
+        "no condition",
+        "Above 5000"
+      ]
     }
   }
 }
