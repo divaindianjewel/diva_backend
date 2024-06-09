@@ -867,6 +867,8 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'oneToOne',
       'api::main-category.main-category'
     >;
+    Show_in_search_bar: Attribute.Enumeration<['true', 'false']> &
+      Attribute.DefaultTo<'false'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
