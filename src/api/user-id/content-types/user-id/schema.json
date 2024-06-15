@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_ids",
+  "info": {
+    "singularName": "user-id",
+    "pluralName": "user-ids",
+    "displayName": "userId"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "decimal"
+    },
+    "localId": {
+      "type": "string"
+    }
+  }
+}

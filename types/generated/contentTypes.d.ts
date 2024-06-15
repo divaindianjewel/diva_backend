@@ -1175,6 +1175,36 @@ export interface ApiReviewReview extends Schema.CollectionType {
   };
 }
 
+export interface ApiUserIdUserId extends Schema.CollectionType {
+  collectionName: 'user_ids';
+  info: {
+    singularName: 'user-id';
+    pluralName: 'user-ids';
+    displayName: 'userId';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    number: Attribute.Decimal;
+    localId: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::user-id.user-id',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::user-id.user-id',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1204,6 +1234,7 @@ declare module '@strapi/types' {
       'api::ordered-product.ordered-product': ApiOrderedProductOrderedProduct;
       'api::product.product': ApiProductProduct;
       'api::review.review': ApiReviewReview;
+      'api::user-id.user-id': ApiUserIdUserId;
     }
   }
 }
