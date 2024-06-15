@@ -1181,12 +1181,13 @@ export interface ApiUserIdUserId extends Schema.CollectionType {
     singularName: 'user-id';
     pluralName: 'user-ids';
     displayName: 'userId';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    number: Attribute.Decimal;
+    number: Attribute.BigInteger;
     localId: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

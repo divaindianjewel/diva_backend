@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-id",
     "pluralName": "user-ids",
-    "displayName": "userId"
+    "displayName": "userId",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -12,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "number": {
-      "type": "decimal"
+      "type": "biginteger"
     },
     "localId": {
       "type": "string"
