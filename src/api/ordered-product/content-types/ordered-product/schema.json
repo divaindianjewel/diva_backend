@@ -27,9 +27,6 @@
     "image": {
       "type": "string"
     },
-    "date": {
-      "type": "string"
-    },
     "name": {
       "type": "string"
     },
