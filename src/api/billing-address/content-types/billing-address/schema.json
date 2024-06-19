@@ -42,6 +42,9 @@
     },
     "phone_number": {
       "type": "biginteger"
+    },
+    "date": {
+      "type": "string"
     }
   }
 }

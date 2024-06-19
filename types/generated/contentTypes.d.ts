@@ -803,6 +803,7 @@ export interface ApiBillingAddressBillingAddress extends Schema.CollectionType {
     email: Attribute.String;
     user_id: Attribute.String;
     phone_number: Attribute.BigInteger;
+    date: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
