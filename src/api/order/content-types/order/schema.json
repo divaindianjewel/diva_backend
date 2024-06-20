@@ -33,6 +33,9 @@
     },
     "total_product": {
       "type": "biginteger"
+    },
+    "billing_id": {
+      "type": "biginteger"
     }
   }
 }
