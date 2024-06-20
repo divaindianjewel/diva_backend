@@ -1038,6 +1038,8 @@ export interface ApiOrderOrder extends Schema.CollectionType {
     total_product: Attribute.BigInteger;
     billing_id: Attribute.BigInteger;
     address: Attribute.Text;
+    city: Attribute.String;
+    state: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
