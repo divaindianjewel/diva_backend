@@ -36,6 +36,9 @@
     },
     "billing_id": {
       "type": "biginteger"
+    },
+    "address": {
+      "type": "text"
     }
   }
 }
