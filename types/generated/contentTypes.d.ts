@@ -1040,6 +1040,7 @@ export interface ApiOrderOrder extends Schema.CollectionType {
     address: Attribute.Text;
     city: Attribute.String;
     state: Attribute.String;
+    payment_method: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
