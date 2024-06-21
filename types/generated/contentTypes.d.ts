@@ -1162,7 +1162,6 @@ export interface ApiReviewReview extends Schema.CollectionType {
     ratting: Attribute.Decimal;
     Description: Attribute.Text;
     user_id: Attribute.String;
-    user_name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
