@@ -21,16 +21,22 @@
     "discount_type": {
       "type": "enumeration",
       "enum": [
-        "Amount (₹)",
-        "Percentage ( % )"
+        "Amount (₹)"
       ]
     },
     "Condition": {
       "type": "enumeration",
       "enum": [
         "no condition",
+        "Above 1000",
+        "Above 2000",
+        "Above 3000",
+        "Above 4000",
         "Above 5000"
       ]
+    },
+    "Number_of_times": {
+      "type": "integer"
     }
   }
 }

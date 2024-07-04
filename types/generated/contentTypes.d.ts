@@ -930,10 +930,18 @@ export interface ApiDiscountDiscount extends Schema.CollectionType {
   attributes: {
     code: Attribute.String;
     amount: Attribute.BigInteger;
-    discount_type: Attribute.Enumeration<
-      ['Amount (\u20B9)', 'Percentage ( % )']
+    discount_type: Attribute.Enumeration<['Amount (\u20B9)']>;
+    Condition: Attribute.Enumeration<
+      [
+        'no condition',
+        'Above 1000',
+        'Above 2000',
+        'Above 3000',
+        'Above 4000',
+        'Above 5000'
+      ]
     >;
-    Condition: Attribute.Enumeration<['no condition', 'Above 5000']>;
+    Number_of_times: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
