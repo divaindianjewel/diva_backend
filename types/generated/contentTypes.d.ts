@@ -969,7 +969,7 @@ export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     banner: Attribute.Media & Attribute.Required;
@@ -978,8 +978,10 @@ export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
       'oneToOne',
       'api::category.category'
     >;
+    priority: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::home-banner.home-banner',
       'oneToOne',
@@ -1111,7 +1113,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -1139,6 +1141,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     Warranty_6_month: Attribute.Enumeration<['Yes', 'No']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::product.product',
       'oneToOne',
