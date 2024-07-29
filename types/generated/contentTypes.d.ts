@@ -978,7 +978,7 @@ export interface ApiHomeBannerHomeBanner extends Schema.CollectionType {
       'oneToOne',
       'api::category.category'
     >;
-    priority: Attribute.BigInteger;
+    priority: Attribute.BigInteger & Attribute.DefaultTo<'1'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

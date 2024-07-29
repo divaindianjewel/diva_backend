@@ -29,7 +29,8 @@
       "target": "api::category.category"
     },
     "priority": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "default": "1"
     }
   }
 }
