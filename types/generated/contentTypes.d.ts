@@ -930,7 +930,7 @@ export interface ApiDiscountDiscount extends Schema.CollectionType {
   attributes: {
     code: Attribute.String;
     amount: Attribute.BigInteger;
-    discount_type: Attribute.Enumeration<['Amount (\u20B9)']>;
+    discount_type: Attribute.Enumeration<['Amount (\u20B9)', 'Percentage (%)']>;
     Condition: Attribute.Enumeration<
       [
         'no condition',
@@ -941,7 +941,7 @@ export interface ApiDiscountDiscount extends Schema.CollectionType {
         'Above 5000'
       ]
     >;
-    Number_of_times: Attribute.Integer;
+    Number_of_times: Attribute.Integer & Attribute.DefaultTo<1000000>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1020,6 +1020,36 @@ export interface ApiMainCategoryMainCategory extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::main-category.main-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMiniBannerMiniBanner extends Schema.CollectionType {
+  collectionName: 'mini_banners';
+  info: {
+    singularName: 'mini-banner';
+    pluralName: 'mini-banners';
+    displayName: 'mini-banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    text: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mini-banner.mini-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mini-banner.mini-banner',
       'oneToOne',
       'admin::user'
     > &
@@ -1246,6 +1276,7 @@ declare module '@strapi/types' {
       'api::discount.discount': ApiDiscountDiscount;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
       'api::main-category.main-category': ApiMainCategoryMainCategory;
+      'api::mini-banner.mini-banner': ApiMiniBannerMiniBanner;
       'api::order.order': ApiOrderOrder;
       'api::ordered-product.ordered-product': ApiOrderedProductOrderedProduct;
       'api::product.product': ApiProductProduct;

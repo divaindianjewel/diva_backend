@@ -21,7 +21,8 @@
     "discount_type": {
       "type": "enumeration",
       "enum": [
-        "Amount (₹)"
+        "Amount (₹)",
+        "Percentage (%)"
       ]
     },
     "Condition": {
@@ -36,7 +37,8 @@
       ]
     },
     "Number_of_times": {
-      "type": "integer"
+      "type": "integer",
+      "default": 1000000
     }
   }
 }

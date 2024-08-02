@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mini_banners",
+  "info": {
+    "singularName": "mini-banner",
+    "pluralName": "mini-banners",
+    "displayName": "mini-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}
