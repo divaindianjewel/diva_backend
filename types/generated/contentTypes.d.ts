@@ -1225,7 +1225,7 @@ export interface ApiUserIdUserId extends Schema.CollectionType {
   info: {
     singularName: 'user-id';
     pluralName: 'user-ids';
-    displayName: 'userId';
+    displayName: 'user-id';
     description: '';
   };
   options: {
