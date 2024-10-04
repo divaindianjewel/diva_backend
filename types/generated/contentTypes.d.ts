@@ -1232,8 +1232,9 @@ export interface ApiUserIdUserId extends Schema.CollectionType {
     draftAndPublish: false;
   };
   attributes: {
-    number: Attribute.BigInteger;
-    localId: Attribute.String;
+    fullName: Attribute.String;
+    email: Attribute.String;
+    password: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

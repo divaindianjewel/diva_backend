@@ -12,10 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "number": {
-      "type": "biginteger"
+    "fullName": {
+      "type": "string"
     },
-    "localId": {
+    "email": {
+      "type": "string"
+    },
+    "password": {
       "type": "string"
     }
   }
